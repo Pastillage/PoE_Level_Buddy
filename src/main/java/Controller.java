@@ -1,19 +1,21 @@
+import Data.CharacterClass;
+import Data.DataFactory;
 import Data.Flags;
-import javafx.event.EventType;
+import Data.Settings;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -55,7 +57,7 @@ public class Controller implements Initializable
     private AnchorPane optionsAnchorPane;
 
     @FXML
-    private ComboBox<?> characterComboBox;
+    private ComboBox<CharacterClass> characterComboBox;
 
     @FXML
     private Button bBrowseClientPath;
@@ -92,6 +94,18 @@ public class Controller implements Initializable
 
     @FXML
     private AnchorPane CharacterPane;
+
+    @FXML
+    private Label dbg_characterName;
+
+    @FXML
+    private Label dbg_lvl_passives;
+
+    @FXML
+    private Label dbg_currentZone;
+
+    @FXML
+    private Label dbg_sessionTime;
 
     @FXML
     private AnchorPane gemSelectorAnchorPane;
@@ -198,6 +212,9 @@ public class Controller implements Initializable
     @FXML
     private ImageView optionsArrow;
 
+    @FXML
+    private Text errorNoClientTxt;
+
     private ArrayList<ImageView> actArray = new ArrayList<>();
 
     /**
@@ -207,8 +224,59 @@ public class Controller implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         actButtonArrayCollector();
-
+        dataInit();
     }
+
+    /**
+     * Collection for initialization of several GUI elements.
+     */
+    private void dataInit()
+    {
+        comboCharacterBoxInit();
+        characterNameTextFieldInit();
+        // Default PoE Path.
+        // C:\Program Files\Steam (x86)\SteamApps\common\Path of Exile\logs\Client.txt
+        // Y:\Steam\SteamApps\common\Path of Exile\logs\Client.txt
+        clientPATH.setText("Y:\\Steam\\SteamApps\\common\\Path of Exile\\logs\\Client.txt");
+
+        File f = new File(clientPATH.getText());
+        if (!f.exists())
+        {
+            errorNoClientTxt.setVisible(true);
+        }
+    }
+
+
+    /**
+     * Init for the CharacterName TextField.
+     * 23 Characters Limit
+     */
+    private void characterNameTextFieldInit()
+    {
+
+            characterNameField.textProperty().addListener((observable, oldValue, newValue) ->
+            {
+                if (newValue.length() <= 23 && newValue.length() >= 0)
+                {
+                    Settings.getINSTANCE().setCharacterName(newValue);
+                    Platform.runLater(() -> dbg_characterName.setText(newValue));
+                }
+                else
+                {
+                    Platform.runLater(() -> characterNameField.setText(oldValue));
+                }
+            });
+    }
+
+    /**
+     * Combobox items init.
+     */
+    private void comboCharacterBoxInit()
+    {
+        characterComboBox.setItems(DataFactory.characterCombo());
+        characterComboBox.getSelectionModel().select(0);
+    }
+
 
     /**
      * Creates an ArrayList for simple Act Button accessibility through numbers.
@@ -253,15 +321,20 @@ public class Controller implements Initializable
             {
                 int actNumPrev = Flags.getINSTANCE().getCurrentActiveAct();
 
-                if (actNum != actNumPrev)
+                if (actNum != actNumPrev || Flags.getINSTANCE().getActiveWindow() == 0)
                 {
                     imgView.setImage(new Image(getClass().getResource("act_buttons/hl/act" + actNum + ".png").toString()));
                     actArray.get(actNumPrev-1).setImage(new Image(getClass().getResource("act_buttons/act" + actNumPrev + ".png").toString()));
                     Flags.getINSTANCE().setCurrentActiveAct(actNum);
+
+                    // Hide options if it was active
+                    if (Flags.getINSTANCE().getActiveWindow() == 0)
+                    {
+                        optionsAnchorPane.setVisible(false);
+                    }
                 }
             }
         }
-
     }
 
     /**
@@ -277,5 +350,33 @@ public class Controller implements Initializable
             result++;
         }
         return 0;
+    }
+
+    /**
+     * Updates the characterclass in settings whenever the combobox is changed.
+     */
+    public void updateCharacterBox()
+    {
+        Settings.getINSTANCE().setCharacterClass(characterComboBox.getSelectionModel().getSelectedItem());
+    }
+
+    /**
+     * File Browser for Client.txt
+     */
+    public void browseFiles()
+    {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setInitialFileName("Client.txt");
+        fileChooser.setTitle("Select PoE's Client.txt File");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Client.txt", "Client.txt"));
+        File selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null)
+        {
+            Settings.getINSTANCE().setClientTXT(selectedFile);
+            Platform.runLater(() -> clientPATH.setText(selectedFile.getAbsolutePath()));
+            // I'm going to trust the FileChooser that the file exists.
+            errorNoClientTxt.setVisible(false);
+        }
     }
 }

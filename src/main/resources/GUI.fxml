@@ -20,65 +20,65 @@
             <Image url="@PoE_Backdrop.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act1Button" fitHeight="31.0" fitWidth="78.0" layoutX="-1.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act1Button" fitHeight="31.0" fitWidth="78.0" layoutX="-1.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act2Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act2Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act2.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act3Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act3Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act3.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act4Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act4Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act4.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act5Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act5Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act5.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act10Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" layoutY="31.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act10Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" layoutY="31.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act10.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act9Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" layoutY="31.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act9Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" layoutY="31.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act9.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act8Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" layoutY="31.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act8Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" layoutY="31.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act8.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act7Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" layoutY="31.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act7Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" layoutY="31.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act7.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="act6Button" fitHeight="31.0" fitWidth="78.0" layoutY="31.0" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" onMouseClicked="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="act6Button" fitHeight="31.0" fitWidth="78.0" layoutY="31.0" onMouseClicked="#actButtonMouseOver" onMouseEntered="#actButtonMouseOver" onMouseExited="#actButtonMouseOver" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@act_buttons/act6.png" />
          </image>
       </ImageView>
       <AnchorPane fx:id="optionsAnchorPane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0">
          <children>
-            <ComboBox fx:id="characterComboBox" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="139.0" />
+            <ComboBox fx:id="characterComboBox" layoutX="14.0" layoutY="90.0" onAction="#updateCharacterBox" prefHeight="25.0" prefWidth="139.0" />
             <Label layoutX="15.0" layoutY="12.0" text="PoE Client.txt Path: " textAlignment="CENTER" textFill="#cc995b">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="bBrowseClientPath" layoutX="321.0" layoutY="34.0" mnemonicParsing="false" text="Browse" />
+            <Button fx:id="bBrowseClientPath" layoutX="321.0" layoutY="34.0" mnemonicParsing="false" onAction="#browseFiles" text="Browse" />
             <TextField fx:id="clientPATH" layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="296.0" />
             <Label layoutX="165.0" layoutY="60.0" textAlignment="CENTER" textFill="#cc995b">
                <font>
@@ -102,9 +102,9 @@
                </font>
             </Label>
             <Button fx:id="bDeleteSaves" layoutX="18.0" layoutY="248.0" mnemonicParsing="false" text="Delete" />
-            <Text fill="RED" layoutX="80.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make sure these settings are up to date!">
+            <Text fill="RED" layoutX="63.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make sure these settings are up to date!">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Text>
             <Label layoutX="202.0" layoutY="70.0" text="Name:" textAlignment="CENTER" textFill="#cc995b">
@@ -113,6 +113,11 @@
                </font>
             </Label>
             <TextField fx:id="characterNameField" layoutX="202.0" layoutY="90.0" prefHeight="25.0" prefWidth="180.0" />
+            <Text fx:id="errorNoClientTxt" fill="RED" layoutX="177.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR: Can't find Client.txt" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="HelperZonePane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0" visible="false">
@@ -147,10 +152,10 @@
                   <Image url="@blackbar.png" />
                </image>
             </ImageView>
-            <Label layoutX="1.0" layoutY="1.0" text="LONG_ASS_FUCK_POE_NAME_LUL" textFill="WHITE" />
-            <Label layoutX="1.0" layoutY="20.0" text="Level: XX    Passives XX/22" textAlignment="CENTER" textFill="WHITE" />
-            <Label ellipsisString="" layoutX="214.0" layoutY="1.0" text="Current Zone: Act1-1" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
-            <Label layoutX="216.0" layoutY="20.0" text="Session Time: xx : xx : xx" textFill="WHITE" />
+            <Label fx:id="dbg_characterName" layoutX="1.0" layoutY="1.0" text="LONG_ASS_FUCK_POE_NAME_LUL" textFill="WHITE" />
+            <Label fx:id="dbg_lvl_passives" layoutX="1.0" layoutY="20.0" text="Level: XX    Passives XX/22" textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="dbg_currentZone" ellipsisString="" layoutX="214.0" layoutY="1.0" text="Current Zone: Act1-1" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+            <Label fx:id="dbg_sessionTime" layoutX="216.0" layoutY="20.0" text="Session Time: xx : xx : xx" textFill="WHITE" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="gemSelectorAnchorPane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0" visible="false">
@@ -259,7 +264,7 @@
             <Image url="@collapse1.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="OptionsAnchorPaneMenu" layoutX="210.0" layoutY="343.0" prefHeight="45.0" prefWidth="180.0" visible="false">
+      <AnchorPane fx:id="OptionsAnchorPaneMenu" layoutX="210.0" layoutY="343.0" prefHeight="45.0" prefWidth="180.0">
          <children>
             <ImageView fx:id="bOptions" fitHeight="40.0" fitWidth="135.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
