@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+
+<AnchorPane prefHeight="390.0" prefWidth="390.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ImageView fitHeight="390.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PoE_Backdrop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act1Button" fitHeight="31.0" fitWidth="78.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act2Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act3Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act4Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act5Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act10Button" fitHeight="31.0" fitWidth="78.0" layoutX="311.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act10.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act9Button" fitHeight="31.0" fitWidth="78.0" layoutX="233.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act9.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act8Button" fitHeight="31.0" fitWidth="78.0" layoutX="155.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act7Button" fitHeight="31.0" fitWidth="78.0" layoutX="77.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="act6Button" fitHeight="31.0" fitWidth="78.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@act_buttons/act6.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="optionsAnchorPane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0" visible="false">
+         <children>
+            <ComboBox fx:id="characterComboBox" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="139.0" />
+            <Label layoutX="15.0" layoutY="12.0" text="PoE Client.txt Path: " textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="bBrowseClientPath" layoutX="321.0" layoutY="34.0" mnemonicParsing="false" text="Browse" />
+            <TextField fx:id="clientPATH" layoutX="14.0" layoutY="34.0" prefHeight="25.0" prefWidth="296.0" />
+            <Label layoutX="165.0" layoutY="60.0" textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="70.0" text="Class:" textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="164.0" text="Force load .ini (saved settings)" textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="bForceLoad" layoutX="16.0" layoutY="188.0" mnemonicParsing="false" text="Browse" />
+            <Label layoutX="16.0" layoutY="226.0" text="Delete Saves" textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="bDeleteSaves" layoutX="18.0" layoutY="248.0" mnemonicParsing="false" text="Delete" />
+            <Text fill="RED" layoutX="80.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make sure these settings are up to date!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label layoutX="202.0" layoutY="70.0" text="Name:" textAlignment="CENTER" textFill="#cc995b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="characterNameField" layoutX="202.0" layoutY="90.0" prefHeight="25.0" prefWidth="180.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="HelperZonePane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0" visible="false">
+         <children>
+            <Text fx:id="zoneNameText" fill="#fec076" layoutX="9.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZONE NAME - SOMETHING" textAlignment="CENTER" wrappingWidth="372.2734375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="iconSignificance0" fitHeight="45.0" fitWidth="45.0" layoutX="331.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ico/waypoint.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconSignificance1" fitHeight="45.0" fitWidth="45.0" layoutX="331.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ico/skillbook.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="iconSignificance2" fitHeight="45.0" fitWidth="45.0" layoutX="331.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ico/respecbook.png" />
+               </image>
+            </ImageView>
+            <WebView fx:id="tipsView" layoutX="20.0" layoutY="35.0" prefHeight="250.0" prefWidth="300.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="CharacterPane" layoutY="348.0" prefHeight="39.0" prefWidth="390.0">
+         <children>
+            <ImageView fitHeight="39.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@blackbar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1.0" layoutY="1.0" text="LONG_ASS_FUCK_POE_NAME_LUL" textFill="WHITE" />
+            <Label layoutX="1.0" layoutY="20.0" text="Level: XX    Passives XX/22" textAlignment="CENTER" textFill="WHITE" />
+            <Label ellipsisString="" layoutX="214.0" layoutY="1.0" text="Current Zone: Act1-1" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+            <Label layoutX="216.0" layoutY="20.0" text="Session Time: xx : xx : xx" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="gemSelectorAnchorPane" layoutY="62.0" prefHeight="287.0" prefWidth="390.0" visible="false">
+         <children>
+            <Text fx:id="textQuestName" fill="#fec076" layoutX="16.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Reward for: &quot;Enemy at the Gate&quot;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="gemRewardIcon0" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="radio0" layoutX="52.0" layoutY="70.0" mnemonicParsing="false" selected="true" text="Frostbolt" textFill="#cc995b">
+               <toggleGroup>
+                  <ToggleGroup fx:id="main_toggle" />
+               </toggleGroup>
+            </RadioButton>
+            <ImageView fx:id="gemRewardIcon1" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon2" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon3" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon4" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon5" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon6" fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon7" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon8" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardBackward" fitHeight="21.0" fitWidth="21.0" layoutX="16.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@collapse1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardForward" fitHeight="21.0" fitWidth="21.0" layoutX="44.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@collapse0.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="radio1" layoutX="52.0" layoutY="100.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio2" layoutX="52.0" layoutY="130.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio3" layoutX="52.0" layoutY="160.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio4" layoutX="52.0" layoutY="190.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio5" layoutX="52.0" layoutY="220.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio6" layoutX="52.0" layoutY="250.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio7" layoutX="264.0" layoutY="70.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio8" layoutX="264.0" layoutY="100.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <ImageView fx:id="gemRewardIcon9" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon10" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="gemRewardIcon11" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="radio9" layoutX="264.0" layoutY="130.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio10" layoutX="264.0" layoutY="160.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <RadioButton fx:id="radio11" layoutX="264.0" layoutY="190.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+            <ImageView fx:id="gemRewardIcon12" fitHeight="30.0" fitWidth="30.0" layoutX="227.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@gems/Frostbolt_inventory_icon.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="radio12" layoutX="264.0" layoutY="221.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="buttonOpenOptions" fitHeight="16.0" fitWidth="16.0" layoutX="370.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@collapse1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="OptionsAnchorPaneMenu" layoutX="210.0" layoutY="343.0" prefHeight="45.0" prefWidth="180.0" visible="false">
+         <children>
+            <ImageView fx:id="bOptions" fitHeight="40.0" fitWidth="135.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@options0.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="optionsArrow" fitHeight="16.0" fitWidth="16.0" layoutX="160.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@collapse0.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
