@@ -1,5 +1,7 @@
 package Data;
 
+import java.util.ArrayList;
+
 /**
  *
  */
@@ -9,10 +11,22 @@ public final class Flags
     // 0 = Settings Other Numbers reserved for act zones (see ActZones enum)
     private int activeWindow = 0;
 
+    private ArrayList<ActZones> visited = new ArrayList<>();
+
     private static final Flags INSTANCE = new Flags();
 
     private Flags()
     {
+    }
+
+    public void addVisitedZone(Zone z)
+    {
+        visited.add(z.getCode());
+    }
+
+    public boolean hasZoneBeenVisited(ActZones z)
+    {
+        return visited.contains(z);
     }
 
     public static Flags getINSTANCE()

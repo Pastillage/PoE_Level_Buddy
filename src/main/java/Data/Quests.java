@@ -15,8 +15,10 @@ public class Quests
     public static ArrayList<QuestRewards> quests_templar = new ArrayList<>();
     public static ArrayList<QuestRewards> quests_witch = new ArrayList<>();
 
-    public static void initQuestsDuelist()
+    public static ArrayList<QuestRewards> initQuestsDuelist()
     {
+        quests_duelist = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Duelist, Gems.Cleave, Gems.Molten_Strike, Gems.Shrapnel_Shot);
         quests_duelist.add(questRewards);
 
@@ -46,10 +48,14 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Duelist, Gems.Chain_Support, Gems.Greater_Multiple_Projectiles_Support, Gems.Increased_Area_of_Effect_Support, Gems.Multistrike_Support, Gems.Spell_Echo_Support);
         quests_duelist.add(questRewards);
+
+        return quests_duelist;
     }
 
-    public static void initQuestsMarauder()
+    public static ArrayList<QuestRewards> initQuestsMarauder()
     {
+        quests_marauder = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Marauder, Gems.Ground_Slam, Gems.Molten_Strike);
         quests_marauder.add(questRewards);
 
@@ -79,9 +85,13 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Marauder, Gems.Brutality_Support , Gems.Chain_Support , Gems.Greater_Multiple_Projectiles_Support , Gems.Increased_Area_of_Effect_Support , Gems.Multistrike_Support , Gems.Spell_Echo_Support);
         quests_marauder.add(questRewards);
+
+        return quests_marauder;
     }
-    public static void initQuestsRanger()
+    public static ArrayList<QuestRewards> initQuestsRanger()
     {
+        quests_ranger = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Ranger, Gems.Frost_Blades, Gems.Ice_Shot, Gems.Shrapnel_Shot);
         quests_ranger.add(questRewards);
 
@@ -112,9 +122,12 @@ public class Quests
         questRewards = new QuestRewards(9, CharacterClass.Ranger, Gems.Chain_Support, Gems.Greater_Multiple_Projectiles_Support, Gems.Increased_Area_of_Effect_Support, Gems.Multistrike_Support, Gems.Spell_Echo_Support);
         quests_ranger.add(questRewards);
 
+        return quests_ranger;
     }
-    public static void initQuestsScion()
+    public static ArrayList<QuestRewards> initQuestsScion()
     {
+        quests_scion = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Scion, Gems.Lightning_Tendrils, Gems.Molten_Strike, Gems.Split_Arrow);
         quests_scion.add(questRewards);
 
@@ -144,9 +157,13 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Scion, Gems.Chain_Support, Gems.Decay_Support, Gems.Greater_Multiple_Projectiles_Support, Gems.Immolate_Support, Gems.Increased_Area_of_Effect_Support, Gems.Multistrike_Support, Gems.Spell_Echo_Support);
         quests_scion.add(questRewards);
+
+        return quests_scion;
     }
-    public static void initQuestsShadow()
+    public static ArrayList<QuestRewards> initQuestsShadow()
     {
+        quests_shadow = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Shadow, Gems.Ethereal_Knives, Gems.Fire_Trap, Gems.Frost_Blades, Gems.Freezing_Pulse, Gems.Lightning_Tendrils);
         quests_shadow.add(questRewards);
 
@@ -176,9 +193,13 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Shadow, Gems.Chain_Support, Gems.Greater_Multiple_Projectiles_Support, Gems.Increased_Area_of_Effect_Support, Gems.Multistrike_Support, Gems.Spell_Echo_Support, Gems.Vile_Toxins_Support);
         quests_shadow.add(questRewards);
+
+        return quests_shadow;
     }
-    public static void initQuestsTemplar()
+    public static ArrayList<QuestRewards> initQuestsTemplar()
     {
+        quests_templar = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Templar, Gems.Frostbolt, Gems.Molten_Strike, Gems.Lightning_Tendrils, Gems.Magma_Orb);
         quests_templar.add(questRewards);
 
@@ -208,9 +229,13 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Templar, Gems.Ignite_Proliferation_Support, Gems.Chain_Support, Gems.Greater_Multiple_Projectiles_Support, Gems.Increased_Area_of_Effect_Support, Gems.Multistrike_Support , Gems.Spell_Echo_Support);
         quests_templar.add(questRewards);
+
+        return quests_templar;
     }
-    public static void initQuestsWitch()
+    public static ArrayList<QuestRewards> initQuestsWitch()
     {
+        quests_witch = new ArrayList<>();
+
         QuestRewards questRewards = new QuestRewards(0, CharacterClass.Witch, Gems.Blight, Gems.Freezing_Pulse, Gems.Lightning_Tendrils, Gems.Magma_Orb, Gems.Raise_Zombie);
         quests_witch.add(questRewards);
 
@@ -240,6 +265,8 @@ public class Quests
 
         questRewards = new QuestRewards(9, CharacterClass.Witch, Gems.Decay_Support , Gems.Chain_Support , Gems.Greater_Multiple_Projectiles_Support , Gems.Increased_Area_of_Effect_Support , Gems.Immolate_Support, Gems.Multistrike_Support , Gems.Spell_Echo_Support);
         quests_witch.add(questRewards);
+
+        return quests_witch;
     }
 
 }
