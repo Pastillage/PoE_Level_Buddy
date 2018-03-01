@@ -217,12 +217,12 @@
             </ImageView>
             <ImageView fx:id="gemRewardBackward" fitHeight="21.0" fitWidth="21.0" layoutX="16.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@collapse1.png" />
+                  <Image url="@ico/collapse1.png" />
                </image>
             </ImageView>
             <ImageView fx:id="gemRewardForward" fitHeight="21.0" fitWidth="21.0" layoutX="44.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@collapse0.png" />
+                  <Image url="@ico/collapse0.png" />
                </image>
             </ImageView>
             <RadioButton fx:id="radio1" layoutX="52.0" layoutY="100.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
@@ -259,21 +259,21 @@
             <RadioButton fx:id="radio12" layoutX="264.0" layoutY="221.0" mnemonicParsing="false" text="Frostbolt" textFill="#cc995b" toggleGroup="$main_toggle" />
          </children>
       </AnchorPane>
-      <ImageView fx:id="buttonOpenOptions" fitHeight="16.0" fitWidth="16.0" layoutX="370.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="buttonOpenOptions" onMouseEntered="#optionsArrowBase" onMouseExited="#optionsArrowBase" onMouseClicked="#optionsArrowBase" fitHeight="16.0" fitWidth="16.0" layoutX="370.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@collapse1.png" />
+            <Image url="@ico/collapse1.png" />
          </image>
       </ImageView>
-      <AnchorPane fx:id="OptionsAnchorPaneMenu" layoutX="210.0" layoutY="343.0" prefHeight="45.0" prefWidth="180.0">
+      <AnchorPane fx:id="optionsAnchorPaneMenu" layoutX="210.0" layoutY="343.0" prefHeight="45.0" prefWidth="180.0">
          <children>
-            <ImageView fx:id="bOptions" fitHeight="40.0" fitWidth="135.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="bOptions" onMouseEntered="#optionsButton" onMouseExited="#optionsButton" onMouseClicked="#optionsButton" fitHeight="40.0" fitWidth="135.0" layoutX="7.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@options0.png" />
+                  <Image url="@ico/options0.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="optionsArrow" fitHeight="16.0" fitWidth="16.0" layoutX="160.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="optionsArrow" onMouseEntered="#optionsArrow" onMouseExited="#optionsArrow" onMouseClicked="#optionsArrow" fitHeight="16.0" fitWidth="16.0" layoutX="160.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@collapse0.png" />
+                  <Image url="@ico/collapse0.png" />
                </image>
             </ImageView>
          </children>

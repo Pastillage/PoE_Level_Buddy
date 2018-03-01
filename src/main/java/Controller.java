@@ -3,7 +3,6 @@ import Data.DataFactory;
 import Data.Flags;
 import Data.Settings;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -204,7 +203,7 @@ public class Controller implements Initializable
     private ImageView buttonOpenOptions;
 
     @FXML
-    private AnchorPane OptionsAnchorPaneMenu;
+    private AnchorPane optionsAnchorPaneMenu;
 
     @FXML
     private ImageView bOptions;
@@ -295,6 +294,12 @@ public class Controller implements Initializable
         actArray.add(act10Button);
     }
 
+    // TODO: Implement Quest Rewards Display
+    // TODO: Finish GUI
+    // TODO: Client Parsing
+    // TODO: HTMLs for Zones
+    // TODO: Waypoint / Skill Point / Respec Point Checkmark images
+
     /**
      * Handles highlighting of act buttons.
      */
@@ -327,14 +332,29 @@ public class Controller implements Initializable
                     actArray.get(actNumPrev-1).setImage(new Image(getClass().getResource("act_buttons/act" + actNumPrev + ".png").toString()));
                     Flags.getINSTANCE().setCurrentActiveAct(actNum);
 
-                    // Hide options if it was active
-                    if (Flags.getINSTANCE().getActiveWindow() == 0)
+                    // Activate the options for that specific act if inOptions.
+                    if (inOptions)
                     {
-                        optionsAnchorPane.setVisible(false);
+                        System.out.println("We should be loading gem selections now...");
+                        // Set Quest Reward Data
+
+                        // Hide options
+                        if (Flags.getINSTANCE().getActiveWindow() == 0)
+                        {
+                            optionsAnchorPane.setVisible(false);
+                        }
                     }
                 }
             }
         }
+    }
+
+    /**
+     * Sets gem selection data.
+     */
+    private void setGemSelectionData()
+    {
+        // Ask DataFactory to supply data from "CLASS" and "ACT"
     }
 
     /**
@@ -377,6 +397,71 @@ public class Controller implements Initializable
             Platform.runLater(() -> clientPATH.setText(selectedFile.getAbsolutePath()));
             // I'm going to trust the FileChooser that the file exists.
             errorNoClientTxt.setVisible(false);
+        }
+    }
+
+    /**
+     * Hides the options when pressed.
+     */
+    public void optionsArrow(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getSource() instanceof ImageView)
+        {
+            ImageView imgView = (ImageView) mouseEvent.getSource();
+
+            if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_ENTERED))
+            {
+                imgView.setImage(new Image(getClass().getResource("ico/collapse0_hl.png").toString()));
+            }
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_EXITED))
+            {
+                imgView.setImage(new Image(getClass().getResource("ico/collapse0.png").toString()));
+            }
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_CLICKED))
+            {
+                optionsAnchorPane.setVisible(false);
+                optionsAnchorPaneMenu.setVisible(false);
+                inOptions = false;
+            }
+        }
+    }
+
+    /**
+     * Handles showing of the optionsAnchorPaneMenu
+     * @param mouseEvent
+     */
+    public void optionsArrowBase(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getSource() instanceof ImageView)
+        {
+            ImageView imgView = (ImageView) mouseEvent.getSource();
+
+            if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_ENTERED))
+                imgView.setImage(new Image(getClass().getResource("ico/collapse1_hl.png").toString()));
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_EXITED))
+                imgView.setImage(new Image(getClass().getResource("ico/collapse1.png").toString()));
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_CLICKED))
+                optionsAnchorPaneMenu.setVisible(true);
+        }
+    }
+
+    private boolean inOptions = true;
+
+    public void optionsButton(MouseEvent mouseEvent)
+    {
+        if (mouseEvent.getSource() instanceof ImageView)
+        {
+            ImageView imgView = (ImageView) mouseEvent.getSource();
+
+            if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_ENTERED))
+                imgView.setImage(new Image(getClass().getResource("ico/options1.png").toString()));
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_EXITED))
+                imgView.setImage(new Image(getClass().getResource("ico/options0.png").toString()));
+            else if (mouseEvent.getEventType().equals(MouseEvent.MOUSE_CLICKED))
+            {
+                optionsAnchorPane.setVisible(true);
+                inOptions = true;
+            }
         }
     }
 }
