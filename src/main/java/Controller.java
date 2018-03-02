@@ -495,12 +495,11 @@ public class Controller implements Initializable
             txtNote7.setVisible(false);
             txtNote10.setVisible(false);
             txtNote11.setVisible(false);
-
-            txtNote2.setVisible(false);
-            txtNote5.setVisible(false);
-            txtNote8.setVisible(false);
-            txtNote11.setVisible(false);
         }
+        txtNote2.setVisible(false);
+        txtNote5.setVisible(false);
+        txtNote8.setVisible(false);
+        txtNote11.setVisible(false);
     }
 
     // Remind players of Deshret
