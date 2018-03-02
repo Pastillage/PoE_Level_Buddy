@@ -423,6 +423,7 @@ public class Controller implements Initializable
                 if (!_currName.equals(cache_name))
                 {
                     Settings.getINSTANCE().setPassivePoints(0);
+                    Flags.getINSTANCE().resetVisited();
                     cache_name = _currName;
                     Settings.getINSTANCE().setCharacterName(_currName);
                     Platform.runLater(() -> dbg_characterName.setText(_currName));

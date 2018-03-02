@@ -19,6 +19,11 @@ public final class Flags
     {
     }
 
+    public void resetVisited()
+    {
+        visited = new ArrayList<>();
+    }
+
     public void addVisitedZone(Zone z)
     {
         visited.add(z.getCode());
