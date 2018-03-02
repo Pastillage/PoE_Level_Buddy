@@ -807,7 +807,7 @@ public class Controller implements Initializable
                     // Activate the options for that specific act if inOptions.
                     if (inOptions)
                     {
-                        System.out.println("We should be loading gem selections now...");
+                        //System.out.println("We should be loading gem selections now...");
                         // Set Quest Reward Data
                         if (actNum == 1)
                             setGemSelectionData(0);
@@ -863,7 +863,7 @@ public class Controller implements Initializable
                     temp.setSelected(true);
 
                 ImageView iTemp = gemIcons.get(c);
-                System.out.println(g.toString());
+                //System.out.println(g.toString());
                 iTemp.setImage(new Image(getClass().getResource("gems/" + g.toString() + "_inventory_icon.png").toString()));
                 iTemp.setVisible(true);
             }

@@ -34,6 +34,13 @@ public class ClientParser
                 nOld = countLines;
                 StoreText();
             }
+            try
+            {
+                Thread.sleep(Settings.getPollingRate());
+            } catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 
