@@ -436,6 +436,8 @@ public class Controller implements Initializable
                 }
                 else if (cache_passives != Settings.getINSTANCE().getPassivePoints())
                 {
+                    Settings.getINSTANCE().saveData();
+                    cache_passives = Settings.getINSTANCE().getPassivePoints();
                     Platform.runLater(() -> dbg_lvl_passives.setText("Level: " + _currLevel + "\tPassives: " + Settings.getINSTANCE().getPassivePoints() + "/22" ));
                 }
 
@@ -479,6 +481,11 @@ public class Controller implements Initializable
             txtNote7.setText("I'm hoping to add more hints and tips later down the line");
             txtNote10.setText("Also, thank YOU for using this program :)");
 
+            txtNote1.setVisible(true);
+            txtNote4.setVisible(true);
+            txtNote7.setVisible(true);
+            txtNote10.setVisible(true);
+
             txtNote11.setVisible(false);
         }
         else
@@ -487,6 +494,11 @@ public class Controller implements Initializable
             txtNote4.setVisible(false);
             txtNote7.setVisible(false);
             txtNote10.setVisible(false);
+            txtNote11.setVisible(false);
+
+            txtNote2.setVisible(false);
+            txtNote5.setVisible(false);
+            txtNote8.setVisible(false);
             txtNote11.setVisible(false);
         }
     }
