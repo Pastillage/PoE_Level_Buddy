@@ -8,6 +8,13 @@
     <artifactId>POE_LEVEL_BUDDY</artifactId>
     <version>1.0.1</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>

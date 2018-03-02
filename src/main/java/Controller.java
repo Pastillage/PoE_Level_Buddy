@@ -14,6 +14,7 @@ import javafx.stage.FileChooser;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
@@ -635,26 +636,7 @@ public class Controller implements Initializable
 
     private void startDaemon()
     {
-        Runnable r = () ->
-        {
-            while (true)
-            {
-                try
-                {
-                    ClientParser.coreLoop();
-                } catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-                try
-                {
-                    Thread.sleep(Settings.getINSTANCE().getPollingRate());
-                } catch (InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        };
+        Runnable r = () -> ClientParser.init();
         Thread t_background_checker = new Thread(r);
         t_background_checker.setDaemon(true);
         t_background_checker.start();
