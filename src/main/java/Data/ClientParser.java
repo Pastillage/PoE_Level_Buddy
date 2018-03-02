@@ -27,14 +27,6 @@ public class ClientParser {
         Tailer tailer = new Tailer(file, listener, 1000);
         tailer.run();
 
-        try {
-            Thread.sleep(100000);
-            System.out.println("sleeping thread for 100000 ms");
-        } catch (InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
-        System.out.println("stopping tailer thread");
-        tailer.stop();
     }
 
     private static String parse_Zone(String in) {
