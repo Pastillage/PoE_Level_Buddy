@@ -16,13 +16,12 @@ public class ClientParser {
 
     public final static String PATH = Settings.getINSTANCE().getClientTXT().getAbsolutePath();
 
-    public static final String gameLogFile = PATH + "\\Client.txt";
 
 
     public static void init() {
 
         TailerListener listener = new LinesListener();
-        File file = new File(gameLogFile);
+        File file = new File(PATH);
 
         Tailer tailer = new Tailer(file, listener, 1000);
         tailer.run();
