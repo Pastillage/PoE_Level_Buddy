@@ -20,6 +20,13 @@ public class DataFactory
         return result;
     }
 
+    public static ObservableList<String> banditCombo()
+    {
+        ObservableList<String> result = FXCollections.observableArrayList();
+        result.addAll("Kill All The Bandits", "Help Alira", "Help Oak", "Help Kraityn");
+        return result;
+    }
+
     public static ArrayList<QuestRewards> receiveQuests()
     {
         switch (Settings.getINSTANCE().getCharacterClass())
@@ -52,5 +59,25 @@ public class DataFactory
             case 9 : res = "[Dialla] The Eternal Nightmare"; break;
         }
         return res;
+    }
+
+    public static String banditTranslator(int n)
+    {
+        if (n == 0)
+        {
+            return " Kill all the bandits for 2 Passive Skill Points!";
+        }
+        else if (n == 1)
+        {
+            return " Help Alira by killing Oak and Kraityn!";
+        }
+        else if (n == 2)
+        {
+            return " Help Oak by killing Alira and Kraityn!";
+        }
+        else
+        {
+            return " Help Kraityn by killing Alira and Oak!";
+        }
     }
 }

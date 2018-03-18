@@ -390,7 +390,7 @@ public final class World
         zones.add(z);
         z = new Zone(z2_10_6, "The Feeding Trough", false, false, false, false, false);
         zones.add(z);
-        z = new Zone(z2_10_7, "The Cathedral Rooftop", false, false, false, false, false);
+        z = new Zone(z2_10_7, "The Control Blocks", false, true, true, false, false);
         zones.add(z);
         z = new Zone(z2_10_8, "The Reliquary", false, true, true, false, false);
         zones.add(z);
