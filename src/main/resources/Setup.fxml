@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="347.0" prefWidth="119.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.SetupController">
+   <children>
+      <ImageView fitHeight="347.0" fitWidth="347.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@PoE_Backdrop.png" />
+         </image>
+      </ImageView>
+      <Text fill="#fec076" layoutX="28.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PoE Buddy First Time Setup">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="PATH" layoutX="15.0" layoutY="78.0" prefHeight="25.0" prefWidth="253.0" />
+      <Button fx:id="bBrowsePath" layoutX="277.0" layoutY="78.0" mnemonicParsing="false" onAction="#browseFiles" text="Browse" />
+      <Text fill="#cc995b" layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PoE Client.txt Location:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#cc995b" layoutX="14.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Character Class:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="classComboBox" layoutX="14.0" layoutY="137.0" prefWidth="150.0" />
+      <ComboBox fx:id="BanditDecisionCombo" layoutX="182.0" layoutY="137.0" prefWidth="150.0" />
+      <Text fill="#cc995b" layoutX="182.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bandit Decision:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Slider fx:id="pollingRateSlider" blockIncrement="100.0" layoutX="26.0" layoutY="253.0" majorTickUnit="100.0" max="5000.0" min="100.0" minorTickCount="100" prefHeight="14.0" prefWidth="302.0" snapToTicks="true" value="1000.0" />
+      <Text fill="#cc995b" layoutX="15.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Polling Rate:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fx:id="pollingRateDisplay" fill="#fec076" layoutX="151.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 ms" textAlignment="CENTER" />
+      <Text fill="#fec076" layoutX="15.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 ms" />
+      <Text fill="#fec076" layoutX="293.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000 ms" />
+      <Text fill="#cc995b" layoutX="103.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#cc995b" layoutX="15.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lower = More CPU Usage &amp; Faster UI Updates">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#cc995b" layoutX="15.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Higher = Less CPU Usage &amp; Slower UI Updates">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button fx:id="bExit" layoutX="130.0" layoutY="309.0" mnemonicParsing="false" onAction="#saveAndExit" text="Save and Exit" />
+      <Text fill="#e41818" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Client.txt is located in your Path of Exile folder in &quot;Logs&quot;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,3 +1,5 @@
+import UI.BuddyUI;
+import UI.Setup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -5,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Launcher
@@ -13,7 +16,24 @@ public class Launcher
 
     public static void main(String[] args)
     {
-        launch(args);
+        File f = new File("save.riz");
+
+        if (f.exists())
+        {
+            BuddyUI b = new BuddyUI();
+            b.Init(args);
+        }
+        else
+        {
+            Setup s = new Setup();
+            s.Init(args);
+        }
+
+
+        //BuddyUI b = new BuddyUI();
+        //b.Init(args);
+
+        //launch(args);
     }
 
     @Override

@@ -12,9 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
-import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
@@ -728,7 +726,7 @@ public class Controller implements Initializable
     private void comboCharacterBoxInit()
     {
         characterComboBox.setItems(DataFactory.characterCombo());
-        characterComboBox.getSelectionModel().select(0);
+        characterComboBox.getSelectionModel().select(Settings.getINSTANCE().getCharacterClass());
     }
 
 

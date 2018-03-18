@@ -20,6 +20,11 @@ public final class Settings
                                     0,0,0,
                                     0,0,0,0};
 
+    public static void setPolling_rate(long polling_rate)
+    {
+        Settings.polling_rate = polling_rate;
+    }
+
     public static long getPollingRate()
     {
         return polling_rate;
